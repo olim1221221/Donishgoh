@@ -1,0 +1,564 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Platforms>AnyCPU;x86;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\AcceptButton.png" />
+    <None Remove="Resources\AcceptButtonShow.png" />
+    <None Remove="Resources\AddButton.png" />
+    <None Remove="Resources\AddUserFinish.png" />
+    <None Remove="Resources\Anotation.png" />
+    <None Remove="Resources\ApproveDiplom.png" />
+    <None Remove="Resources\AreYouShure.png" />
+    <None Remove="Resources\B %281%29.jpg" />
+    <None Remove="Resources\B %2810%29.jpg" />
+    <None Remove="Resources\B %282%29.jpg" />
+    <None Remove="Resources\B %283%29.jpg" />
+    <None Remove="Resources\B %284%29.jpg" />
+    <None Remove="Resources\B %285%29.jpg" />
+    <None Remove="Resources\B %286%29.jpg" />
+    <None Remove="Resources\B %287%29.jpg" />
+    <None Remove="Resources\B %288%29.jpg" />
+    <None Remove="Resources\B %289%29.jpg" />
+    <None Remove="Resources\B1.jpg" />
+    <None Remove="Resources\B10.jpg" />
+    <None Remove="Resources\B11.jpg" />
+    <None Remove="Resources\B12.jpg" />
+    <None Remove="Resources\B2.jpg" />
+    <None Remove="Resources\B3.jpg" />
+    <None Remove="Resources\B4.jpg" />
+    <None Remove="Resources\B5.jpg" />
+    <None Remove="Resources\B6.jpg" />
+    <None Remove="Resources\B7.jpg" />
+    <None Remove="Resources\B8.jpg" />
+    <None Remove="Resources\B9.jpg" />
+    <None Remove="Resources\BlueDiplomsReportImage.png" />
+    <None Remove="Resources\ButtonRapport.png" />
+    <None Remove="Resources\ButtonRapportShow.png" />
+    <None Remove="Resources\CancelUsers.png" />
+    <None Remove="Resources\CencelDiplom.png" />
+    <None Remove="Resources\CertificateDone.png" />
+    <None Remove="Resources\CheckForFinishing.png" />
+    <None Remove="Resources\CheckPrint.png" />
+    <None Remove="Resources\CheckPrinting.png" />
+    <None Remove="Resources\CheckReject.png" />
+    <None Remove="Resources\CheckSuccess.png" />
+    <None Remove="Resources\Close Circle.png" />
+    <None Remove="Resources\Close.png" />
+    <None Remove="Resources\CommentFakulty.png" />
+    <None Remove="Resources\CommentFieldsImage.png" />
+    <None Remove="Resources\CommentPopUp.png" />
+    <None Remove="Resources\Desktop.png" />
+    <None Remove="Resources\DesktopFrame.png" />
+    <None Remove="Resources\DesktopShow.png" />
+    <None Remove="Resources\DiplomFrame.png" />
+    <None Remove="Resources\Diplom_magistr_01.jpg" />
+    <None Remove="Resources\dotdot.png" />
+    <None Remove="Resources\Double.png" />
+    <None Remove="Resources\Download.png" />
+    <None Remove="Resources\EditButtonImage.png" />
+    <None Remove="Resources\EditUser.png" />
+    <None Remove="Resources\Empty.png" />
+    <None Remove="Resources\enter.png" />
+    <None Remove="Resources\FirstForm.png" />
+    <None Remove="Resources\FoRevision.png" />
+    <None Remove="Resources\Form.png" />
+    <None Remove="Resources\FrameAddFakulty.png" />
+    <None Remove="Resources\FrameAddGrade.png" />
+    <None Remove="Resources\FrameAddSettings.png" />
+    <None Remove="Resources\FrameAddUsers.png" />
+    <None Remove="Resources\FrameDiplomDemo.png" />
+    <None Remove="Resources\FrameDiplomDone.png" />
+    <None Remove="Resources\FrameUsers.png" />
+    <None Remove="Resources\Full.png" />
+    <None Remove="Resources\hidepassword.png" />
+    <None Remove="Resources\Label.png" />
+    <None Remove="Resources\LastPageImage.png" />
+    <None Remove="Resources\LogsButton.png" />
+    <None Remove="Resources\LogsButtonShow.png" />
+    <None Remove="Resources\LogsGridImage.png" />
+    <None Remove="Resources\M %281%29.jpg" />
+    <None Remove="Resources\M %282%29.jpg" />
+    <None Remove="Resources\M %283%29.jpg" />
+    <None Remove="Resources\M %284%29.jpg" />
+    <None Remove="Resources\M %285%29.jpg" />
+    <None Remove="Resources\M %286%29.jpg" />
+    <None Remove="Resources\M %287%29.jpg" />
+    <None Remove="Resources\M0.jpg" />
+    <None Remove="Resources\M1.jpg" />
+    <None Remove="Resources\M2.jpg" />
+    <None Remove="Resources\M3.jpg" />
+    <None Remove="Resources\M4.jpg" />
+    <None Remove="Resources\M5.jpg" />
+    <None Remove="Resources\M6.jpg" />
+    <None Remove="Resources\M7.jpg" />
+    <None Remove="Resources\M8.jpg" />
+    <None Remove="Resources\Minus Circle.png" />
+    <None Remove="Resources\Mu1.jpg" />
+    <None Remove="Resources\Mu10.jpg" />
+    <None Remove="Resources\Mu11.jpg" />
+    <None Remove="Resources\Mu12.jpg" />
+    <None Remove="Resources\Mu2.jpg" />
+    <None Remove="Resources\Mu3.jpg" />
+    <None Remove="Resources\Mu4.jpg" />
+    <None Remove="Resources\Mu5.jpg" />
+    <None Remove="Resources\Mu6.jpg" />
+    <None Remove="Resources\Mu7.jpg" />
+    <None Remove="Resources\Mu8.jpg" />
+    <None Remove="Resources\Mu9.jpg" />
+    <None Remove="Resources\NextPageImage.png" />
+    <None Remove="Resources\OtherFieldsImage.png" />
+    <None Remove="Resources\OtherFieldsImage1.png" />
+    <None Remove="Resources\PopupSearch.png" />
+    <None Remove="Resources\PrintButton.png" />
+    <None Remove="Resources\PrintButtonShow.png" />
+    <None Remove="Resources\PrintFinish.png" />
+    <None Remove="Resources\Quit.png" />
+    <None Remove="Resources\Raports.png" />
+    <None Remove="Resources\RaportsShow.png" />
+    <None Remove="Resources\RapportFrame.png" />
+    <None Remove="Resources\RedDiplomsReportImage.png" />
+    <None Remove="Resources\RedirectButton.png" />
+    <None Remove="Resources\RedirectButtonShow.png" />
+    <None Remove="Resources\RejectButton.png" />
+    <None Remove="Resources\RejectButtonShow.png" />
+    <None Remove="Resources\RussianButton.png" />
+    <None Remove="Resources\RussianButtonShow.png" />
+    <None Remove="Resources\searchbox.png" />
+    <None Remove="Resources\Searchpopup.png" />
+    <None Remove="Resources\selectBox.png" />
+    <None Remove="Resources\Settings.png" />
+    <None Remove="Resources\SettingsButtonImage.png" />
+    <None Remove="Resources\SettingShowButtonImage.png" />
+    <None Remove="Resources\SettingsShow.png" />
+    <None Remove="Resources\showpassword.png" />
+    <None Remove="Resources\SpecialiyGridImage.png" />
+    <None Remove="Resources\Statistic.png" />
+    <None Remove="Resources\StatisticShow.png" />
+    <None Remove="Resources\Status.png" />
+    <None Remove="Resources\StudentsDiplomReportImage.png" />
+    <None Remove="Resources\StudGradeResp.png" />
+    <None Remove="Resources\TajikButton.png" />
+    <None Remove="Resources\TajikButtonShow.png" />
+    <None Remove="Resources\TodayButton.png" />
+    <None Remove="Resources\TodayButtonShow.png" />
+    <None Remove="Resources\userBox.png" />
+    <None Remove="Resources\UsersButton.png" />
+    <None Remove="Resources\UsersButtonShow.png" />
+    <None Remove="Resources\Бакалавр мукарари.docx" />
+    <None Remove="Resources\Вход.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocX" Version="2.5.0" />
+    <PackageReference Include="EPPlus" Version="5.4.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="WPFPdfViewer" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\AcceptButton.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AcceptButtonShow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AddButton.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AddUserFinish.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Anotation.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\ApproveDiplom.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AreYouShure.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\B1.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\B10.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\B11.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\B12.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\B2.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\B3.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\B4.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\B5.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\B6.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\B7.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\B8.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\B9.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\BlueDiplomsReportImage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\ButtonRapport.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\ButtonRapportShow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\CancelUsers.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\CencelDiplom.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\CertificateDone.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\CheckForFinishing.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\CheckPrint.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\CheckPrinting.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\CheckReject.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\CheckSuccess.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Close Circle.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Close.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\CommentFakulty.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\CommentFieldsImage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\CommentPopUp.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Desktop.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\DesktopFrame.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\DesktopShow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\DiplomFrame.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Diplom_magistr_01.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\dotdot.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Double.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Download.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\EditButtonImage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\EditUser.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Empty.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\enter.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\FirstForm.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\FoRevision.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Form.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\FrameAddFakulty.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\FrameAddGrade.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\FrameAddSettings.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\FrameAddUsers.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\FrameDiplomDemo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\FrameDiplomDone.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\FrameUsers.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Full.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\hidepassword.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Label.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\LastPageImage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\LogsButton.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\LogsButtonShow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\LogsGridImage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\M0.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\M1.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\M2.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\M3.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\M4.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\M5.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\M6.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\M7.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\M8.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Minus Circle.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Mu1.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Mu10.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Mu11.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Mu12.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Mu2.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Mu3.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Mu4.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Mu5.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Mu6.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Mu7.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Mu8.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Mu9.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\NextPageImage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\OtherFieldsImage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\OtherFieldsImage1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\PopupSearch.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\PrintButton.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\PrintButtonShow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\PrintFinish.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Quit.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Raports.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\RaportsShow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\RapportFrame.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\RedDiplomsReportImage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\RedirectButton.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\RedirectButtonShow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\RejectButton.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\RejectButtonShow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\RussianButton.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\RussianButtonShow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\searchbox.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Searchpopup.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\selectBox.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Settings.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\SettingsButtonImage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\SettingShowButtonImage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\SettingsShow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\showpassword.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\SpecialiyGridImage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Statistic.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\StatisticShow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Status.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\StudentsDiplomReportImage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\StudGradeResp.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\TajikButton.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\TajikButtonShow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\TodayButton.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\TodayButtonShow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\userBox.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\UsersButton.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\UsersButtonShow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Бакалавр мукарари.docx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Вход.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

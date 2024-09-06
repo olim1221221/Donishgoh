@@ -1,0 +1,878 @@
+﻿<Window x:Class="Donishgoh.CreatDiplomForm" WindowStyle="None"
+        Left="0" Top="0"
+        ResizeMode="NoResize" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Donishgoh"
+        mc:Ignorable="d"
+        Title="CreatDiplomForm" Height="1080" Width="1920">
+    <Window.Resources>
+        <ImageSource x:Key="UsersButton">/Resources/UsersButton.png</ImageSource>
+        <ImageSource x:Key="UsersButtonShow">/Resources/UsersButtonShow.png</ImageSource>
+        <ImageSource x:Key="Desktop">/Resources/Desktop.png</ImageSource>
+        <ImageSource x:Key="DesktopShow">/Resources/DesktopShow.png</ImageSource>
+        <ImageSource x:Key="LogsButton">/Resources/LogsButton.png</ImageSource>
+        <ImageSource x:Key="LogsButtonShow">/Resources/LogsButtonShow.png</ImageSource>
+        <ImageSource x:Key="Raports">/Resources/Raports.png</ImageSource>
+        <ImageSource x:Key="RaportsShow">/Resources/RaportsShow.png</ImageSource>
+        <ImageSource x:Key="Settings">/Resources/Settings.png</ImageSource>
+        <ImageSource x:Key="SettingsShow">/Resources/SettingsShow.png</ImageSource>
+        <ImageSource x:Key="RussianButton">/Resources/RussianButtonShow.png</ImageSource>
+        <ImageSource x:Key="RussianButtonShow">/Resources/RussianButton.png</ImageSource>
+        <ImageSource x:Key="TajikButton">/Resources/TajikButtonShow.png</ImageSource>
+        <ImageSource x:Key="TajikButtonShow">/Resources/TajikButton.png</ImageSource>
+        <ImageSource x:Key="Statistic">/Resources/StatisticShow.png</ImageSource>
+        <ImageSource x:Key="StatisticShow">/Resources/Statistic.png</ImageSource>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Uniform" ImageSource="/Resources/Form.png"/>
+        </Grid.Background>
+        <Button x:Name="UsersButton" Content="           Сотрудники" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="35,225,0,0" VerticalAlignment="Top" Height="73" Width="362" Foreground="#FF0F172A" BorderBrush="{x:Null}" FontSize="22" RenderTransformOrigin="0.7,0.274" Click="UsersButton_Click" MouseEnter="UsersButton_MouseEnter" MouseLeave="UsersButton_MouseLeave">
+            <Button.Resources>
+                <ImageBrush x:Key="HoverImageBrush" ImageSource="{StaticResource UsersButton}" />
+                <ImageBrush x:Key="HoverEnterBrush" ImageSource="{StaticResource UsersButtonShow}" />
+            </Button.Resources>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="{StaticResource HoverEnterBrush}" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Grid>
+                                    <Border Background="{TemplateBinding Background}" />
+                                    <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource HoverImageBrush}" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{StaticResource HoverImageBrush}" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+        </Button>
+        <Button x:Name="DesktopButton" Content="           Рабочее окно" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="35,299,0,0" VerticalAlignment="Top" Height="72" Width="362" Foreground="#FF0F172A" BorderBrush="{x:Null}" FontSize="22" RenderTransformOrigin="0.7,0.274" MouseEnter="DesktopButton_MouseEnter" MouseLeave="DesktopButton_MouseLeave" Click="DesktopButton_Click">
+
+            <Button.Resources>
+                <ImageBrush x:Key="HoverImageBrush" ImageSource="{StaticResource Desktop}" />
+                <ImageBrush x:Key="HoverEnterBrush" ImageSource="{StaticResource DesktopShow}" />
+            </Button.Resources>
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="{StaticResource HoverEnterBrush}" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Grid>
+                                    <Border Background="{TemplateBinding Background}" />
+                                    <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource HoverImageBrush}" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{StaticResource HoverImageBrush}" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Logs" Content="           Журнал" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="35,373,0,0" VerticalAlignment="Top" Height="72" Width="362" Foreground="#FF0F172A" BorderBrush="{x:Null}" FontSize="22" RenderTransformOrigin="0.7,0.274" MouseEnter="Logs_MouseEnter" MouseLeave="Logs_MouseLeave" Click="Logs_Click">
+
+            <Button.Resources>
+                <ImageBrush x:Key="HoverImageBrush" ImageSource="{StaticResource LogsButton}" />
+                <ImageBrush x:Key="HoverEnterBrush" ImageSource="{StaticResource LogsButtonShow}" />
+            </Button.Resources>
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="{StaticResource HoverEnterBrush}" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Grid>
+                                    <Border Background="{TemplateBinding Background}" />
+                                    <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource HoverImageBrush}" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{StaticResource HoverImageBrush}" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="RaportsButton" Content="           Отчеты" HorizontalAlignment="Left" Margin="35,447,0,0" VerticalAlignment="Top" Height="72" Width="362" BorderBrush="{x:Null}" FontSize="22" Foreground="#FF0F172A" MouseEnter="RaportsButton_MouseEnter" MouseLeave="RaportsButton_MouseLeave" Click="RaportsButton_Click">
+            <Button.Resources>
+                <ImageBrush x:Key="HoverImageBrush" ImageSource="{StaticResource Raports}" />
+                <ImageBrush x:Key="HoverEnterBrush" ImageSource="{StaticResource RaportsShow}" />
+            </Button.Resources>
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="{StaticResource HoverEnterBrush}" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Grid>
+                                    <Border Background="{TemplateBinding Background}" />
+                                    <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource HoverImageBrush}" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{StaticResource HoverImageBrush}" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Settings" Content="           Настройки" HorizontalAlignment="Left" Margin="35,522,0,0" VerticalAlignment="Top" Height="72" Width="362" BorderBrush="{x:Null}" Foreground="#FF0F172A" FontSize="22" MouseEnter="Settings_MouseEnter" MouseLeave="Settings_MouseLeave" Click="Settings_Click">
+            <Button.Resources>
+                <ImageBrush x:Key="HoverImageBrush" ImageSource="{StaticResource Settings}" />
+                <ImageBrush x:Key="HoverEnterBrush" ImageSource="{StaticResource SettingsShow}" />
+            </Button.Resources>
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="{StaticResource HoverEnterBrush}" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Grid>
+                                    <Border Background="{TemplateBinding Background}" />
+                                    <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource HoverImageBrush}" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{StaticResource HoverImageBrush}" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <ScrollViewer Margin="470,166,36,48" RenderTransformOrigin="0.5,0.5">
+            <ScrollViewer.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.165"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-1.997"/>
+                </TransformGroup>
+            </ScrollViewer.RenderTransform>
+            <Grid x:Name="CreatDiplomGrid" Width="1396" Height="1427" >
+                <TextBox x:Name="NameBox" HorizontalAlignment="Left" Padding="15" Margin="502,294,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="60" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="SurnameBox" HorizontalAlignment="Left" Padding="15" Margin="35,298,0,0" Text="Введите фамилию" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="58" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False" Foreground="#FF0F172A" TextChanged="SurnameBox_TextChanged">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="PatronimicBox" HorizontalAlignment="Left" Padding="15" Margin="963,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="412" Height="59" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Label x:Name="NameLabel" Content="Имя" HorizontalAlignment="Left" Margin="519,260,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+                <Label x:Name="SurnameLabel" Content="Фамилия" HorizontalAlignment="Left" Margin="50,257,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="31"/>
+                <Label x:Name="PatronimicLabel" Content="Отчество" HorizontalAlignment="Left" Margin="963,255,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="31"/>
+                <Label x:Name="FirstLabel" Content="На подтверждение" HorizontalAlignment="Left" Margin="34,40,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="36" FontWeight="Bold"/>
+                <Button x:Name="RussianButton" Content="           Русский" HorizontalAlignment="Left" Margin="1216,45,0,0" VerticalAlignment="Top" Height="47" Width="159" BorderBrush="{x:Null}" FontSize="18" Foreground="#FF0F172A" Click="RussianButton_ClickAsync" IsEnabled="False">
+                    <Button.Resources>
+                        <ImageBrush x:Key="HoverImageBrush" ImageSource="{StaticResource TajikButton}" />
+                        <ImageBrush x:Key="HoverEnterBrush" ImageSource="{StaticResource TajikButtonShow}" />
+                    </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/RussianButtonShow.png"/>
+                    </Button.Background>
+
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Grid>
+                                            <Border Background="{TemplateBinding Background}" />
+                                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button x:Name="TajikButton" Content="           Тоҷики" HorizontalAlignment="Left" Margin="1030,45,0,0" VerticalAlignment="Top" Height="47" Width="159" BorderBrush="{x:Null}" FontSize="18" Foreground="#FF0F172A" Click="TajikButton_ClickAsync">
+                    <Button.Resources>
+                        <ImageBrush x:Key="HoverImageBrush" ImageSource="{StaticResource TajikButton}" />
+                        <ImageBrush x:Key="HoverEnterBrush" ImageSource="{StaticResource TajikButtonShow}" />
+                    </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/TajikButtonShow.png"/>
+                    </Button.Background>
+
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Grid>
+                                            <Border Background="{TemplateBinding Background}" />
+                                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <TextBox x:Name="LevelBox" HorizontalAlignment="Left" Padding="15" Margin="499,422,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="59" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <ComboBox x:Name="SpecialityComboBox" DisplayMemberPath="SpecialityTj" Margin="990,420,-4,0" VerticalAlignment="Top" Height="58" FontSize="20" BorderBrush="{x:Null}" Background="{x:Null}" IsEnabled="False" Foreground="#FF0F172A" SelectionChanged="SpecialityComboBox_SelectionChanged">
+                    <ComboBox.OpacityMask>
+                        <ImageBrush Stretch="Uniform"/>
+                    </ComboBox.OpacityMask>
+                </ComboBox>
+
+                <TextBox x:Name="SpecialityBox" HorizontalAlignment="Left" Padding="15" Margin="965,420,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="412" Height="59" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False" TextChanged="SpecialityBox_TextChangedAsync" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+
+                <Label x:Name="BirthDateLabel" Content="Дата рождения" HorizontalAlignment="Left" Margin="51,383,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="31"/>
+                <Label x:Name="LavelLabel" Content="Уровень образования" HorizontalAlignment="Left" Margin="520,384,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="31"/>
+                <Label x:Name="SpecialityLabel" Content="Специальность" HorizontalAlignment="Left" Margin="985,386,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+                <TextBox x:Name="QualificationBox" HorizontalAlignment="Left" Padding="15" Margin="34,547,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="58" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="DirectionBox" HorizontalAlignment="Left" Padding="15" Margin="499,547,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="58" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="StudyFormBox" HorizontalAlignment="Left" Padding="15" Margin="963,547,0,0" Text="Форма обучения" TextWrapping="Wrap" VerticalAlignment="Top" Width="412" Height="58" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/selectBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Label x:Name="QualificationLabel" Content="Квалификация" HorizontalAlignment="Left" Margin="52,508,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="31"/>
+                <Label x:Name="DirectionLabel" Content="Направление" HorizontalAlignment="Left" Margin="520,508,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="30"/>
+                <Label x:Name="StudyFormLabel" Content="Форма обучения" HorizontalAlignment="Left" Margin="984,508,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="30"/>
+                <TextBox x:Name="InstitutionsIssuedDiplomBox" HorizontalAlignment="Left" Padding="15" Margin="34,671,0,0" Text="Учреждения выдавивший диплом" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="58" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="INNBox" HorizontalAlignment="Left" Padding="15" Margin="499,671,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="58" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="DiplomCreatedDateBox" HorizontalAlignment="Left" Padding="15" Margin="963,671,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="412" Height="58" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Label x:Name="InstitutionsIssuedDiplomLabel" Content="Название учреждения, выдавшего диплом" HorizontalAlignment="Left" Margin="52,633,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="31"/>
+                <Label x:Name="INNLabel" Content="ИНН" HorizontalAlignment="Left" Margin="521,633,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="31" RenderTransformOrigin="-0.435,0.667"/>
+                <Label x:Name="DiplomCreatedDateLabel" Content="Дата создания диплома" HorizontalAlignment="Left" Margin="986,635,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="31"/>
+                <TextBox x:Name="StudyProgramLevelBox" HorizontalAlignment="Left" Padding="15" Margin="34,800,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="58" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="DocumentStudyBox" HorizontalAlignment="Left" Padding="15" Margin="499,800,0,0" Text="Выберите  документ" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="58" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/selectBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Label x:Name="StudyProgramLevelLebel" Content="Срок образовательной программы" HorizontalAlignment="Left" Margin="52,758,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+                <Label x:Name="DocumentStudyLebel" Content="Документ о предыдущем образовании" HorizontalAlignment="Left" Margin="520,758,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+                <TextBox x:Name="FirstAprovalBox" HorizontalAlignment="Left" Padding="15" Margin="499,915,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="58" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/selectBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <ComboBox x:Name="FirstApprovalComboBox" HorizontalAlignment="Left" Margin="499,915,0,0" VerticalAlignment="Top" Width="411" Height="58" FontSize="20" BorderBrush="{x:Null}" Background="{x:Null}" SelectionChanged="FirstApprovalComboBox_SelectionChangedAsync" IsEnabled="False" Foreground="#FF0F172A">
+                    <ComboBox.OpacityMask>
+                        <ImageBrush Stretch="Uniform"/>
+                    </ComboBox.OpacityMask>
+                </ComboBox>
+                <Label x:Name="FirstApprovalLebel" Content="Первый подтверждающий" HorizontalAlignment="Left" Margin="520,876,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+                <Label x:Name="SecondApprovalLebel" Content="Второй подтверждающий" HorizontalAlignment="Left" Margin="987,877,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+                <TextBox x:Name="SecondAprovalBox" HorizontalAlignment="Left" Padding="15" Margin="963,915,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="58" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/selectBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <ComboBox x:Name="SecondApprovalComboBox" HorizontalAlignment="Left" Margin="964,915,0,0" VerticalAlignment="Top" Width="410" Height="58" FontSize="20" BorderBrush="{x:Null}" Background="{x:Null}" SelectionChanged="SecondApprovalComboBox_SelectionChangedAsync" IsEnabled="False" Foreground="#FF0F172A">
+                    <ComboBox.OpacityMask>
+                        <ImageBrush Stretch="Uniform"/>
+                    </ComboBox.OpacityMask>
+                </ComboBox>
+                <TextBox x:Name="ThirdApprovalBox" HorizontalAlignment="Left" Padding="15" Margin="499,1010,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="58" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/selectBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <ComboBox x:Name="ThirdApprovalComboBox" HorizontalAlignment="Left" Margin="498,1010,0,0" VerticalAlignment="Top" Width="412" Height="59" FontSize="20" BorderBrush="{x:Null}" Background="{x:Null}" SelectionChanged="ThirdApprovalComboBox_SelectionChangedAsync" IsEnabled="False" Foreground="#FF0F172A">
+                    <ComboBox.OpacityMask>
+                        <ImageBrush Stretch="Uniform"/>
+                    </ComboBox.OpacityMask>
+                </ComboBox>
+                <Label x:Name="ThirdApprovalLebel" Content="Третий подтверждающий" HorizontalAlignment="Left" Margin="521,976,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+                <Label x:Name="FourthApprovalLebel" Content="Четвертый подтверждающий" HorizontalAlignment="Left" Margin="987,978,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+                <TextBox x:Name="FourthApprovalBox" HorizontalAlignment="Left" Padding="15" Margin="963,1010,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="58" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/selectBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <ComboBox x:Name="FourthApprovalComboBox" HorizontalAlignment="Left" Margin="963,1010,0,0" VerticalAlignment="Top" Width="411" Height="59" FontSize="20" BorderBrush="{x:Null}" Background="{x:Null}" SelectionChanged="FourthApprovalComboBox_SelectionChangedAsync" IsEnabled="False" Foreground="#FF0F172A">
+                    <ComboBox.OpacityMask>
+                        <ImageBrush Stretch="Uniform"/>
+                    </ComboBox.OpacityMask>
+                </ComboBox>
+                <Button x:Name="SendButton" Content="Отправить на согласование" HorizontalAlignment="Left" Margin="1077,1136,0,0" VerticalAlignment="Top" Width="298" Height="56" FontSize="20" Foreground="#FFF9F9F9" BorderBrush="{x:Null}" Click="SendButton_ClickAsync" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/AddUserFinish.png"/>
+                    </Button.Background>
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}" >
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}" CornerRadius="1">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="border" Property="BorderBrush" Value="#00FFFFFF"/>
+                                                <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+
+
+                    </Button.Style>
+                </Button>
+                <Button x:Name="CancelButton" Content="Отмена" HorizontalAlignment="Left" Margin="845,1138,0,0" VerticalAlignment="Top" Height="56" Width="199" FontSize="20" BorderBrush="{x:Null}" Click="CancelButton_Click">
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/CancelUsers.png"/>
+                    </Button.Background>
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}" >
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}" CornerRadius="1">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="border" Property="BorderBrush" Value="#00FFFFFF"/>
+                                                <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+
+
+                    </Button.Style>
+                </Button>
+                <CheckBox Content="" HorizontalAlignment="Left" Margin="537,1112,0,0" VerticalAlignment="Top" FontSize="40" Height="52" Visibility="Hidden"/>
+                <CheckBox Content="" HorizontalAlignment="Left" Margin="580,1110,0,0" VerticalAlignment="Top" FontSize="40" Height="52" Visibility="Hidden"/>
+                <Label x:Name="StudyProgramDescLebel" Content="Описание образовательной программы" HorizontalAlignment="Left" Margin="51,876,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" RenderTransformOrigin="0.509,2.014"/>
+                <TextBox x:Name="StudentId" HorizontalAlignment="Left" Padding="15" Margin="34,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="59" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" TextChanged="StudentId_TextChangedAsync" Foreground="#FF0F172A" KeyDown="StudentId_KeyDownAsync">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Label x:Name="StudentIdLabel" Content="ID Студента" HorizontalAlignment="Left" Margin="48,126,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+                <Label x:Name="SaveSuccess" Content="" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="845,1085,0,0" VerticalAlignment="Top" Foreground="#FF87F700" FontSize="20" Width="528"/>
+                <TextBox x:Name="DescriptionStudyBlock" HorizontalAlignment="Left" Padding="15" Margin="34,907,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="163" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/OtherFieldsImage.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Label x:Name="TypeDiplomResp" Content="Тип Диплома" HorizontalAlignment="Left" Margin="986,759,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+
+                <TextBox x:Name="TypeDiplomBox" HorizontalAlignment="Left" Padding="15" Margin="963,800,0,0" Text="Выберите" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="58" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/selectBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <ComboBox x:Name="TypeDiplomComboBox" HorizontalAlignment="Left" Margin="963,800,0,0" VerticalAlignment="Top" Width="410" Height="58" FontSize="20" BorderBrush="{x:Null}" Background="{x:Null}" SelectionChanged="TypeDiplomComboBox_SelectionChanged" IsEnabled="False" Foreground="#FF0F172A">
+                    <ComboBox.OpacityMask>
+                        <ImageBrush Stretch="Uniform"/>
+                    </ComboBox.OpacityMask>
+                </ComboBox>
+                <DatePicker x:Name="BirthdatePicker" HorizontalAlignment="Left" Padding="15" Margin="34,422,0,0" VerticalAlignment="Top" Height="59" Width="410" BorderBrush="{x:Null}" Foreground="#FF0F172A" FontSize="18">
+                    <DatePicker.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </DatePicker.Background>
+                </DatePicker>
+                <ComboBox x:Name="StudyFormComboBox" HorizontalAlignment="Left" Margin="963,547,0,0" VerticalAlignment="Top" Width="410" Height="58" FontSize="20" BorderBrush="{x:Null}" Background="{x:Null}" IsEnabled="False" Foreground="#FF0F172A" SelectionChanged="StudyFormComboBox_SelectionChanged">
+                    <ComboBox.OpacityMask>
+                        <ImageBrush Stretch="Uniform"/>
+                    </ComboBox.OpacityMask>
+                </ComboBox>
+                <ComboBox x:Name="DocumentStudyComboBox" HorizontalAlignment="Left" Margin="498,800,0,0" VerticalAlignment="Top" Width="410" Height="58" FontSize="20" BorderBrush="{x:Null}" Background="{x:Null}" IsEnabled="False" Foreground="#FF0F172A" SelectionChanged="DocumentStudyComboBox_SelectionChanged">
+                    <ComboBox.OpacityMask>
+                        <ImageBrush Stretch="Uniform"/>
+                    </ComboBox.OpacityMask>
+                </ComboBox>
+                <Label Content="*" HorizontalAlignment="Left" Margin="35,126,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31" RenderTransformOrigin="0.348,0.806"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="36,258,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31" RenderTransformOrigin="-0.311,0.548"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="505,259,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="37,384,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="30"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="506,385,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="971,386,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="30"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="971,508,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="32"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="506,508,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="37,508,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31" RenderTransformOrigin="-0.865,0.505"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="38,633,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="507,634,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="972,635,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="38,758,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="507,758,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="972,759,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="38,875,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="507,876,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="30"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="973,877,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="508,976,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="32"/>
+                <Label Content="*" HorizontalAlignment="Left" Margin="974,977,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31"/>
+                <Label x:Name="BirthDateLabel_Copy" Content="Решение аттестационной комиссии " HorizontalAlignment="Left" Margin="59,1094,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32" Width="289"/>
+                <DatePicker x:Name="DesCertCommisionPicker" HorizontalAlignment="Left" Padding="15" Margin="42,1133,0,0" VerticalAlignment="Top" Height="59" Width="410" BorderBrush="{x:Null}" Foreground="#FF0F172A" FontSize="18">
+                    <DatePicker.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </DatePicker.Background>
+                </DatePicker>
+                <Label Content="*" HorizontalAlignment="Left" Margin="45,1094,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFF10000" Height="31"/>
+                <Button x:Name="Grades" Content="Оценки" HorizontalAlignment="Left" Margin="576,1140,0,0" VerticalAlignment="Top" Width="240" Height="56" FontSize="20" Foreground="#FFF9F9F9" BorderBrush="{x:Null}" IsEnabled="False" Click="Grades_Click">
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/FoRevision.png"/>
+                    </Button.Background>
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}" >
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}" CornerRadius="1">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="border" Property="BorderBrush" Value="#00FFFFFF"/>
+                                                <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+
+
+                    </Button.Style>
+                </Button>
+                <TextBox x:Name="Language" HorizontalAlignment="Left" Padding="15" Margin="962,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="412" Height="59" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <ComboBox x:Name="LanguageComboBox"  Margin="964,162,22,0" VerticalAlignment="Top" Height="58" FontSize="20" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF0F172A" SelectionChanged="LanguageComboBox_SelectionChanged">
+                    <ComboBox.OpacityMask>
+                        <ImageBrush Stretch="Uniform"/>
+                    </ComboBox.OpacityMask>
+                </ComboBox>
+                <Label x:Name="SpecialityLabel_Copy" Content="Язык обучение" HorizontalAlignment="Left" Margin="984,122,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+
+            </Grid>
+        </ScrollViewer>
+        <TextBox x:Name="FioTj" HorizontalAlignment="Left" Margin="9,600,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="FioRu" HorizontalAlignment="Left" Margin="168,600,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="LevelTj" HorizontalAlignment="Left" Margin="9,676,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="LevelRu" HorizontalAlignment="Left" Margin="169,659,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden" VerticalScrollBarVisibility="Visible" Height="18"/>
+        <TextBox x:Name="SpecialityTj" HorizontalAlignment="Left" Margin="9,710,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="SpecialityRu" HorizontalAlignment="Left" Margin="169,695,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="QualificationTj" HorizontalAlignment="Left" Margin="10,741,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="QualificationRu" HorizontalAlignment="Left" Margin="169,741,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="DirecionTj" HorizontalAlignment="Left" Margin="10,787,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="DirectionRu" HorizontalAlignment="Left" Margin="169,787,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="StudyFormTj" HorizontalAlignment="Left" Margin="10,828,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="StudyFormRu" HorizontalAlignment="Left" Margin="169,828,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="InstitutionTj" HorizontalAlignment="Left" Margin="10,868,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="InstitutionRu" HorizontalAlignment="Left" Margin="169,868,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="StudyProgramTj" HorizontalAlignment="Left" Margin="10,909,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="StudyProgramRu" HorizontalAlignment="Left" Margin="169,909,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.508,2.394" Visibility="Hidden"/>
+        <TextBox x:Name="DocTj" HorizontalAlignment="Left" Margin="10,945,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="DocRu" HorizontalAlignment="Left" Margin="169,945,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.508,2.394" Visibility="Hidden"/>
+        <Label x:Name="FioUserLabel" Content="Косимов Рустам" HorizontalAlignment="Left" Margin="1191,44,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="21" FontWeight="Bold" Width="607"/>
+        <Label x:Name="PositionLabelFirst" Content="Проректор" HorizontalAlignment="Left" Margin="1191,72,0,0" VerticalAlignment="Top" Foreground="#FF737885" FontSize="14" FontWeight="Bold" Width="221"/>
+        <Button x:Name="QuitButton" Content="          Выход" HorizontalAlignment="Left" Margin="35,968,0,0" VerticalAlignment="Top" Height="82" Width="333" FontSize="20" FontWeight="Bold" Click="QuitButton_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/Resources/Quit.png"/>
+            </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}" >
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}" CornerRadius="1">
+                                    <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter TargetName="border" Property="BorderBrush" Value="#00FFFFFF"/>
+                                        <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+
+
+            </Button.Style>
+        </Button>
+
+        <TextBox x:Name="SpecialityBaseTj" HorizontalAlignment="Left" Margin="9,639,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden" TextChanged="SpecialityBaseTj_TextChanged"/>
+        <TextBox x:Name="SpecialityBaseRu" HorizontalAlignment="Left" Margin="169,630,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="DescTjfields" HorizontalAlignment="Left" Margin="293,766,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="DescRufields" HorizontalAlignment="Left" Margin="293,600,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.508,2.394" Visibility="Hidden"/>
+        <Button x:Name="StatisticButton" Content="           Статистика на год" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="35,153,0,0" VerticalAlignment="Top" Height="72" Width="362" Foreground="#FF0F172A" BorderBrush="{x:Null}" FontSize="22" RenderTransformOrigin="0.7,0.274" MouseEnter="StatisticButton_MouseEnter" MouseLeave="StatisticButton_MouseLeave">
+
+            <Button.Resources>
+                <ImageBrush x:Key="HoverImageBrush" ImageSource="{StaticResource Statistic}" />
+                <ImageBrush x:Key="HoverEnterBrush" ImageSource="{StaticResource StatisticShow}" />
+            </Button.Resources>
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="{StaticResource HoverEnterBrush}" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Grid>
+                                    <Border Background="{TemplateBinding Background}" />
+                                    <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource HoverImageBrush}" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{StaticResource HoverImageBrush}" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label x:Name="UniverNameCation" Content="Таджикский национальный" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="132,38,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="22" FontWeight="Bold" Height="63" Width="250" FontFamily="Bahnschrift SemiCondensed" FontStyle="Normal"/>
+        <TextBox x:Name="Fakulty" HorizontalAlignment="Left" Margin="169,686,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="StudentDouble" HorizontalAlignment="Left" Margin="82,695,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <Button x:Name="Sver" Content="" HorizontalAlignment="Left" Margin="1856,0,0,0" VerticalAlignment="Top" Height="25" Width="26" BorderBrush="{x:Null}" Foreground="White" FontFamily="Microsoft YaHei" FontSize="16" Click="Sver_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/Resources/Minus Circle.png"/>
+            </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}" >
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}" CornerRadius="1">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter TargetName="border" Property="BorderBrush" Value="#00FFFFFF"/>
+                                        <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+
+
+            </Button.Style>
+        </Button>
+        <Button x:Name="Sver_Copy" Content="" HorizontalAlignment="Left" Margin="1889,0,0,0" VerticalAlignment="Top" Height="25" Width="26" BorderBrush="{x:Null}" Foreground="White" FontFamily="Microsoft YaHei" FontSize="16" Click="Sver_Copy_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/Resources/Close Circle.png"/>
+            </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}" >
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}" CornerRadius="1">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter TargetName="border" Property="BorderBrush" Value="#00FFFFFF"/>
+                                        <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+
+
+            </Button.Style>
+        </Button>
+        <TextBox x:Name="DiplomColumnId" HorizontalAlignment="Left" Margin="35,616,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" Visibility="Hidden"/>
+        <Grid x:Name="DiplomGradeGrid" Visibility="Hidden">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Resources/FrameDiplomDone.png"/>
+            </Grid.Background>
+            <DataGrid x:Name="AddStudentGradeGrid" Margin="483,60,462,217" ColumnHeaderHeight="60" RowHeight="61"   BorderBrush="{x:Null}" FontSize="16" HorizontalGridLinesBrush="White" GridLinesVisibility="None" CanUserResizeRows="False" SelectionUnit="FullRow" CanUserAddRows="False" IsReadOnly="True" FocusVisualStyle="{x:Null}" FontWeight="Bold" Foreground="#FF0F172A" Visibility="Visible" MinColumnWidth="12" SelectionChanged="AddStudentGradeGrid_SelectionChanged" >
+
+                <DataGrid.RowStyle>
+                    <Style TargetType="{x:Type DataGridRow}">
+                        <Setter Property="Background" Value="Transparent"/>
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="{x:Type DataGridColumnHeader}">
+                        <Setter Property="Background" Value="Transparent"/>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+
+                <DataGrid.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="/Resources/FrameAddGrade.png"/>
+                </DataGrid.Background>
+
+
+
+            </DataGrid>
+            <TextBox x:Name="CreditsResponseBox" HorizontalAlignment="Left" Padding="15" Margin="1046,868,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="412" Height="59" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" IsEnabled="False" Foreground="#FF0F172A">
+                <TextBox.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                </TextBox.Background>
+            </TextBox>
+            <Button x:Name="Save" Content="Добавить" HorizontalAlignment="Left" Margin="730,961,0,0" VerticalAlignment="Top" Width="240" Height="56" BorderBrush="{x:Null}" Foreground="#FFF9F9F9" FontSize="20" FontWeight="Bold" Click="Save_ClickAsync">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/Resources/FoRevision.png"/>
+                </Button.Background>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}" >
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}" CornerRadius="1">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsPressed" Value="True">
+                                            <Setter TargetName="border" Property="BorderBrush" Value="#00FFFFFF"/>
+                                            <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+
+
+                </Button.Style>
+            </Button>
+            <Button x:Name="Done" Content="Готово" HorizontalAlignment="Left" Margin="992,961,0,0" VerticalAlignment="Top" Width="240" Height="56" BorderBrush="{x:Null}" Foreground="#FFF9F9F9" FontSize="20" FontWeight="Bold" Click="Done_Click" RenderTransformOrigin="0.488,1.732">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/Resources/ApproveDiplom.png"/>
+                </Button.Background>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}" >
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}" CornerRadius="1">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsPressed" Value="True">
+                                            <Setter TargetName="border" Property="BorderBrush" Value="#00FFFFFF"/>
+                                            <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+
+
+                </Button.Style>
+            </Button>
+            <Grid x:Name="GradeGrid" Visibility="Hidden">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/Resources/CommentFakulty.png"/>
+                </Grid.Background>
+                <Label x:Name="LessonName" Content="Название предмета на русском" HorizontalAlignment="Left" Margin="737,246,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+                <TextBox x:Name="CreditsText" PreviewTextInput="TextBox_PreviewTextInput" HorizontalAlignment="Left" Padding="15" Margin="732,458,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="59" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Label x:Name="LessonName_Copy" Content="Кредиты" HorizontalAlignment="Left" Margin="732,426,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+                <TextBox x:Name="AuditsText" PreviewTextInput="TextBox_PreviewTextInput" HorizontalAlignment="Left" Padding="15" Margin="732,544,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="59" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Label x:Name="LessonName_Copy1" Content="Аудиторские" HorizontalAlignment="Left" Margin="737,512,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+                <TextBox x:Name="GradeStudText" HorizontalAlignment="Left" Padding="15" Margin="732,627,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="59" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" Foreground="#FF0F172A">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Label x:Name="LessonName_Copy2" Content="Оценка студента" HorizontalAlignment="Left" Margin="737,601,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+                <Button x:Name="Save1" Content="Сохранить" HorizontalAlignment="Left" Margin="732,691,0,0" VerticalAlignment="Top" Width="196" Height="56" BorderBrush="{x:Null}" Foreground="#FFF9F9F9" FontSize="20" FontWeight="Bold" Click="Save1_ClickAsync">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="/Resources/ApproveDiplom.png"/>
+                    </Button.Background>
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}" >
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}" CornerRadius="1">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="border" Property="BorderBrush" Value="#00FFFFFF"/>
+                                                <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+
+
+                    </Button.Style>
+                </Button>
+                <Button x:Name="Save_Copy" Content="Отмена" HorizontalAlignment="Left" Margin="947,691,0,0" VerticalAlignment="Top" Width="196" Height="56" BorderBrush="{x:Null}" Foreground="#FFF9F9F9" FontSize="20" FontWeight="Bold" Click="Save_Copy_Click">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="/Resources/FoRevision.png"/>
+                    </Button.Background>
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}" >
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}" CornerRadius="1">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="border" Property="BorderBrush" Value="#00FFFFFF"/>
+                                                <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+
+
+                    </Button.Style>
+                </Button>
+                <ComboBox x:Name="LessonsNameComboBox" DisplayMemberPath="Npr"  HorizontalAlignment="Left" Margin="766,278,0,0" VerticalAlignment="Top" Width="410" Height="58" FontSize="20" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF0F172A" SelectionChanged="LessonsNameComboBox_SelectionChanged">
+                    <ComboBox.OpacityMask>
+                        <ImageBrush Stretch="Uniform"/>
+                    </ComboBox.OpacityMask>
+                </ComboBox>
+                <TextBox x:Name="LessonNameText" HorizontalAlignment="Left" Padding="15" Margin="732,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="59" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" Foreground="#FF0F172A" TextChanged="LessonNameText_TextChangedAsync">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Label x:Name="LessonName_Copy3" Content="Название предмета на таджикском" HorizontalAlignment="Left" Margin="732,336,0,0" VerticalAlignment="Top" Foreground="#FF0F172A" FontSize="16" FontWeight="Bold" Height="32"/>
+                <TextBox x:Name="LessonNameTextTj" HorizontalAlignment="Left" Padding="15" Margin="730,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411" Height="59" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontSize="18" Foreground="#FF0F172A" TextChanged="LessonNameText_TextChangedAsync">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Resources/userBox.png"/>
+                    </TextBox.Background>
+                </TextBox>
+
+            </Grid>
+
+        </Grid>
+        <TextBox x:Name="GradeId" HorizontalAlignment="Left" Margin="35,653,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" Text="0" Visibility="Hidden"/>
+        <TextBox x:Name="Lang" HorizontalAlignment="Left" Margin="48,582,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
